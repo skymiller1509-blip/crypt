@@ -1,0 +1,4 @@
+# Never ignore .kiro. The Kiroween rules say ignoring it can disqualify
+# the submission. Only tool noise goes here.
+node_modules/
+.DS_Store

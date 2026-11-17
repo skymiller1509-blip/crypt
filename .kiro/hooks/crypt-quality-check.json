@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Crypt quality check",
+      "trigger": "PostFileSave",
+      "description": "Runs node --check on app.js and server.js after each save. Prints OK per file or the syntax error. Exit code non-zero if either file has a syntax error.",
+      "matcher": "app\\.js$|server\\.js$",
+      "action": {
+        "type": "command",
+        "command": "node --check app.js && echo 'app.js: OK' && node --check server.js && echo 'server.js: OK'"
+      }
+    }
+  ]
+}
